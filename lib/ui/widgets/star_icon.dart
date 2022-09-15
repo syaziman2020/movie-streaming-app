@@ -11,7 +11,7 @@ class StarIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 2),
+      padding: const EdgeInsets.only(left: 2),
       child: Image.asset(
         'assets/star_yellow.png',
         width: 18,

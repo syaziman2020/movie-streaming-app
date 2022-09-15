@@ -23,7 +23,7 @@ class DisneyTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 127,
-      margin: EdgeInsets.only(top: 17, bottom: 13),
+      margin: const EdgeInsets.only(top: 17, bottom: 13),
       child: Row(
         children: [
           Container(
@@ -38,14 +38,14 @@ class DisneyTile extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                   color: shadow,
-                  offset: Offset(0, 30),
+                  offset: const Offset(0, 30),
                   blurRadius: 30,
                   spreadRadius: -20,
                 ),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           Column(
@@ -54,12 +54,12 @@ class DisneyTile extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: whiteTextStyle.copyWith(
+                style: blackTextStyle.copyWith(
                   fontSize: 20,
                   fontWeight: blackWeight,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 1,
               ),
               Text(
@@ -69,14 +69,14 @@ class DisneyTile extends StatelessWidget {
                   fontWeight: semiBold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 18,
               ),
               Row(
                 children: [
-                  StarIcon(),
-                  StarIcon(),
-                  StarIcon(),
+                  const StarIcon(),
+                  const StarIcon(),
+                  const StarIcon(),
                   StarIcon(
                     colorIcon: starIcon,
                   ),

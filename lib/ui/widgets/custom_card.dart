@@ -19,7 +19,7 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 300,
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         left: 24,
         top: 28,
       ),
@@ -27,7 +27,7 @@ class CustomCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: EdgeInsets.only(bottom: 19),
+            margin: const EdgeInsets.only(bottom: 19),
             height: 207,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(21),
@@ -38,7 +38,7 @@ class CustomCard extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                   color: shadow,
-                  offset: Offset(0, 35),
+                  offset: const Offset(0, 35),
                   blurRadius: 30,
                   spreadRadius: -10,
                 ),
@@ -53,12 +53,12 @@ class CustomCard extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: whiteTextStyle.copyWith(
+                      style: blackTextStyle.copyWith(
                         fontSize: 20,
                         fontWeight: blackWeight,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 1,
                     ),
                     Text(
@@ -71,11 +71,11 @@ class CustomCard extends StatelessWidget {
                   ],
                 ),
               ),
-              StarIcon(),
-              StarIcon(),
-              StarIcon(),
-              StarIcon(),
-              StarIcon(),
+              const StarIcon(),
+              const StarIcon(),
+              const StarIcon(),
+              const StarIcon(),
+              const StarIcon(),
             ],
           )
         ],

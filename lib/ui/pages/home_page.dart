@@ -3,7 +3,6 @@ import 'package:movie_streaming_app/shared/theme.dart';
 import 'package:movie_streaming_app/ui/pages/search_page.dart';
 import 'package:movie_streaming_app/ui/widgets/custom_card.dart';
 import 'package:movie_streaming_app/ui/widgets/disney_tile.dart';
-import 'package:movie_streaming_app/ui/widgets/star_icon.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,7 +12,7 @@ class HomePage extends StatelessWidget {
     Widget header() {
       return Container(
         width: double.infinity,
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 29,
           left: 24,
         ),
@@ -25,7 +24,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Text(
                     'Moviez',
-                    style: whiteTextStyle.copyWith(
+                    style: blackTextStyle.copyWith(
                       fontSize: 28,
                       fontWeight: blackWeight,
                     ),
@@ -45,17 +44,17 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SearchPage(),
+                    builder: (context) => const SearchPage(),
                   ),
                 );
               },
               child: Container(
                 width: 55,
                 height: 45,
-                padding: EdgeInsets.only(left: 22),
+                padding: const EdgeInsets.only(left: 22),
                 decoration: BoxDecoration(
-                  color: indigoColor,
-                  borderRadius: BorderRadius.only(
+                  color: whiteColor,
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(
                       100,
                     ),
@@ -67,7 +66,7 @@ class HomePage extends StatelessWidget {
                 child: Center(
                   child: Icon(
                     Icons.search,
-                    color: whiteColor,
+                    color: blackColor,
                     size: 30,
                   ),
                 ),
@@ -82,7 +81,7 @@ class HomePage extends StatelessWidget {
       return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
-          children: [
+          children: const [
             CustomCard(
               imageUrl: 'assets/movie1.png',
               title: 'John Wick 4',
@@ -102,7 +101,7 @@ class HomePage extends StatelessWidget {
 
     Widget disneyItem() {
       return Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 28,
           left: 24,
         ),
@@ -111,10 +110,10 @@ class HomePage extends StatelessWidget {
           children: [
             Text(
               'From Disney',
-              style: whiteTextStyle.copyWith(
+              style: blackTextStyle.copyWith(
                   fontSize: 24, fontWeight: blackWeight),
             ),
-            DisneyTile(
+            const DisneyTile(
               imageUrl: 'assets/movie4.png',
               title: 'Mulan Session',
               genre: 'History, War',
@@ -122,7 +121,7 @@ class HomePage extends StatelessWidget {
               starIcon: Color(0xffE1E1EA),
               starIconLast: Color(0xffE1E1EA),
             ),
-            DisneyTile(
+            const DisneyTile(
               imageUrl: 'assets/movie3.png',
               title: 'Beauty & Beast',
               genre: 'Sci-Fiction',

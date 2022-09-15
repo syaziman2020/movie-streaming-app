@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movie_streaming_app/shared/theme.dart';
-import 'package:movie_streaming_app/ui/widgets/custom_card.dart';
 import 'package:movie_streaming_app/ui/widgets/disney_tile.dart';
 
 class SearchPage extends StatelessWidget {
@@ -11,16 +10,20 @@ class SearchPage extends StatelessWidget {
     Widget searchEngine() {
       return Container(
         child: TextFormField(
+          cursorColor: blackColor,
+          style: blackTextStyle.copyWith(
+            fontSize: 16,
+          ),
           decoration: InputDecoration(
             border: InputBorder.none,
             icon: Icon(
               Icons.search,
-              color: whiteColor,
+              color: blackColor,
               size: 25,
             ),
           ),
         ),
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 22,
         ),
         margin: const EdgeInsets.only(
@@ -30,7 +33,7 @@ class SearchPage extends StatelessWidget {
           right: 24,
         ),
         decoration: BoxDecoration(
-          color: indigoColor,
+          color: whiteColor,
           borderRadius: BorderRadius.circular(100),
         ),
       );
@@ -46,29 +49,29 @@ class SearchPage extends StatelessWidget {
           children: [
             Text(
               'Search Result (3)',
-              style: whiteTextStyle.copyWith(
+              style: blackTextStyle.copyWith(
                 fontSize: 20,
                 fontWeight: blackWeight,
               ),
             ),
-            DisneyTile(
+            const DisneyTile(
               imageUrl: 'assets/movie5.png',
               title: 'The Dark II',
               genre: 'Horror',
-              starIconLast: Color(0xff363748),
+              starIconLast: Color(0xffE1E1EA),
               shadow: Color.fromRGBO(22, 158, 159, 0.3),
             ),
-            DisneyTile(
+            const DisneyTile(
               imageUrl: 'assets/movie6.png',
               title: 'The Dark Knight',
               genre: 'Heroes',
               shadow: Color.fromRGBO(22, 158, 159, 0.3),
             ),
-            DisneyTile(
+            const DisneyTile(
               imageUrl: 'assets/movie7.png',
               title: 'The Dark Tower',
               genre: 'Action',
-              starIconLast: Color(0xff363748),
+              starIconLast: Color(0xffE1E1EA),
             ),
           ],
         ),
@@ -77,7 +80,7 @@ class SearchPage extends StatelessWidget {
 
     Widget buttonSuggest() {
       return Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 60,
           left: 78,
           right: 78,
@@ -85,9 +88,9 @@ class SearchPage extends StatelessWidget {
         width: double.infinity,
         height: 60,
         decoration: BoxDecoration(
-          color: blueColor,
+          color: blackColor,
           borderRadius: BorderRadius.circular(37),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(94, 56, 229, 0.2),
               offset: Offset(0, 35),
